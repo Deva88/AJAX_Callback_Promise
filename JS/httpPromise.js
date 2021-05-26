@@ -47,20 +47,20 @@ function makePromiseCall(methodType, url, async = true, data = null) {
 
 
 // To print the existing data in url
-const getURL = "http://localhost:3000/employees/11";
+const getURL = "http://localhost:5500/employees/11";
 makePromiseCall("GET",getURL,true)
         .then(responseText=>{console.log("Get User Data: "+responseText)})
         .catch(error=>console.log("GET Error Status: "+JSON.stringify(error)));
 
 // To print the deleted data in url
-const deleteURL = "http://localhost:3000/employees/13";
+const deleteURL = "http://localhost:5500/employees/13";
 makePromiseCall("DELETE",deleteURL,false)
         .then(responseText=>{console.log("Get User Data: "+responseText)})
         .catch(error=>console.log("GET Error Status: "+JSON.stringify(error)));
 
 // To add the data into url
-const postURL = "http://localhost:3000/employees";
-const emplData ={"name":"Manu","Salary":"330002.32"}
+const postURL = "http://localhost:5500/employees";
+const emplData ={"name":"Devendra","Salary":"440002.32"}
 makePromiseCall("POST",postURL,true,emplData)
         .then(responseText=>{console.log("Get User Data: "+responseText)})
         .catch(error=>console.log("GET Error Status: "+JSON.stringify(error)));
